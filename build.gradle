@@ -1,0 +1,32 @@
+buildscript {
+
+    ext {
+        compile_sdk_version = 28
+        target_sdk_version = 28
+        min_sdk_version = 16
+        version_code = 12
+        version_name = "2.1.0"
+    }
+
+    repositories {
+        google()
+        jcenter()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.2.1'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url "https://jitpack.io" }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
